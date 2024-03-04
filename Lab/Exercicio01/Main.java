@@ -1,4 +1,6 @@
-public class Exercicio1 {
+package Exercicio01;
+
+public class Main {
     public static void main(String[] args) {
         int fatorial = fatorialRecursivo(4);
         System.out.println(fatorial);
