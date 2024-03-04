@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // ToDo uncomment
-        //testExercise1();
-        //testExercise2();
+        testExercise1();
+        testExercise2();
         testExercise3();
     }
 
