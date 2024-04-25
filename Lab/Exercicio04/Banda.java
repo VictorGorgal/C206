@@ -13,18 +13,24 @@ public class Banda {
 
     public void tocarShow() {
         for (Musica musica : musicas) {
-            System.out.println("Tocando musica: ");  // + musicas[posicao].toString()
+            System.out.println("Tocando musica: " + musica.getNome());
         }
     }
 
     public boolean adicionarMusica(Musica musica) {
-        musicas[musicas.length] = musica;
-        return true;
+        for (int i = 0; i < musicas.length; i++) {
+            if (musicas[i] == null) {
+                musicas[i] = musica;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public boolean deletarMusica(String nome) {
         for (int i = 0; i < musicas.length; i++) {
-            if (Objects.equals(musicas[i].nome, nome)) {  // nao da para acessar ;-;
+            if (Objects.equals(musicas[i].getNome(), nome)) {
                 musicas[i] = null;
                 return true;
             }

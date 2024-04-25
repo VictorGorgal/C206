@@ -6,12 +6,16 @@ public class Autor {
 
     public void listarSagas() {
         for (Saga saga : sagas) {
-            // Nao tem como acessar os parametros das sagas ;-;
-            // System.out.println(saga.toString());
+            System.out.println("Nota: " + saga.getNote() + " Livros:");
+            saga.listarLivros();
         }
     }
 
     public void adicionarSaga(Saga saga) {
-        sagas[sagas.length] = saga;
+        for (int i = 0; i < 100; i++) {
+            if (sagas[i] == null) {
+                sagas[i] = saga;
+            }
+        }
     }
 }

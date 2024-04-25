@@ -4,14 +4,21 @@ public class Saga {
     private int note;
     private Livro[] livros = new Livro[100];
 
+    public int getNote() {
+        return note;
+    }
+
     public void listarLivros() {
         for (Livro livro : livros) {
-            // Nao tem como acessar os parametros dos livros ;-;
-            // System.out.println(livro.toString());
+            System.out.println("Livro: " + livro.getTitulo() + " Paginas: " + livro.getPaginas());
         }
     }
 
     public void adicionarLivro(Livro livro) {
-        livros[livros.length] = livro;
+        for (int i = 0; i < 100; i++) {
+            if (livros[i] == null) {
+                livros[i] = livro;
+            }
+        }
     }
 }
