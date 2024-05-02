@@ -13,6 +13,17 @@ public class Carro {
         System.out.println("Vrum vrum");
     }
 
+    public void setTipoDePneu(int tipoDePneu) throws Exception {
+        if (tipoDePneu < 1) {
+            throw new Exception("Tipo de pneu invalido!");
+        }
+        if (tipoDePneu > 5) {
+            throw new Exception("Tipo de pneu invalido!");
+        }
+
+        this.tipoDePneu = tipoDePneu;
+    }
+
     @Override
     public String toString() {
         return "Carro{" +

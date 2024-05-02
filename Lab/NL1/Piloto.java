@@ -13,8 +13,17 @@ public class Piloto {
         this.idade = idade;
         this.nacionalidade = nacionalidade;
 
-        this.id = idGeral;
         idGeral++;
+        this.id = idGeral;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void correr(Carro carro) {
+        System.out.println("Piloto correndo");
+        carro.correr();
     }
 
     @Override
